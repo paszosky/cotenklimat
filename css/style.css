@@ -1,3 +1,14 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+
+.main {
+    
+}
 
 .main {
     max-width: 900px;
@@ -70,6 +81,34 @@ img {
 .navigation__list {
     display: flex;
     justify-content: space-around;
+}
+
+@media (max-width: 640px) {
+    .navigation__list {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .navigation__list--visible {
+        display: flex;
+    }
+
+    .navigation__btn {
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 641px) {
+    .navigation__btn {
+        display: none;
+    }
 }
 
 .sidebar {
