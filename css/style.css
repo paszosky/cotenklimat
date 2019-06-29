@@ -26,6 +26,27 @@
 }
 
 
+img {
+    width: 100%;
+    /* max-height: 200px; */
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 16px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+    .article {
+        grid-template-columns: 1fr;
+    }
+    .article__image {
+        margin-bottom: 16px;
+    }
+}
+
 .content {
     background: #fe4a49;
     grid-area: content;
